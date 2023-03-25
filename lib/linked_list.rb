@@ -17,10 +17,26 @@ class LinkedList
       end
       current_node.next_node = new_node
     end
-      #if there is already a head create new node at end of first node
-    def
   end
-
-
- end
-
+      #if there is already a head create new node at end of first node
+  def count
+    count = 0
+  current_node = @head
+    while current_node != nil
+    count += 1
+    current_node = current_node.next_node
+    end
+    count
+  end
+  
+  def to_string
+    current_node = @head
+    string = ""
+    while current_node != nil
+      string += current_node.data.to_s
+      current_node = current_node.next_node
+      result += " " unless current_node.nil?
+    end
+    string
+  end
+end

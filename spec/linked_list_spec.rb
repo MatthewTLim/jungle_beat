@@ -17,10 +17,19 @@ RSpec.describe LinkedList do
     expect(@next_node).to eq(nil)
   end
 
-  it 'has count method' do
+  it 'has count' do
     list = LinkedList.new
+    expect(list.count).to eq(0)
+    list.append("doop")
     expect(list.count).to eq(1)
   end
+
+  it 'has to_string' do
+    list = LinkedList.new
+    list.append("doop")
+    expect(list.to_string).to eq("doop")
+  end
+
 end
 
   # before:(each) do @list = LinkedList.new 

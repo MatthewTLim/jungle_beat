@@ -30,6 +30,19 @@ RSpec.describe LinkedList do
     expect(list.to_string).to eq("doop")
   end
 
+  it 'complex test' do
+    list = LinkedList.new
+    expect(list.head).to eq(nil)
+    list.append("doop")
+    expect(list.head.data).to eq("doop")
+    expect(list.head.next_node).to eq(nil)
+    list.append("deep")
+    expect(list.head.next_node.data).to eq("deep")
+    expect(list.count).to eq(2)
+    list.to_string
+    expect(list.to_string).to eq("doop deep")
+   
+  end
 end
 
   # before:(each) do @list = LinkedList.new 

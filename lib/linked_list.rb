@@ -35,7 +35,7 @@ class LinkedList
     while current_node != nil
       string += current_node.data.to_s
       current_node = current_node.next_node
-      result += " " unless current_node.nil?
+      string += " " unless current_node.nil?
     end
     string
   end

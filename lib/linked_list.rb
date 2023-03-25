@@ -18,7 +18,7 @@ class LinkedList
       current_node.next_node = new_node
     end
   end
-      #if there is already a head create new node at end of first node
+  #if there is already a head create new node at end of first node
   def count
     count = 0
   current_node = @head
@@ -39,4 +39,15 @@ class LinkedList
     end
     string
   end
+
+  def prepend(data)
+    if @head.nil?
+      @head = Node.new(data, nil)
+    else
+      new_node = Node.new(data, @head)
+      @head = new_node
+    end
+  end
+  # To prepend to a linked list, you simply create a new node, and have 
+  #it point to the node that was previously the head. Now, it becomes the new head.
 end
